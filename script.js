@@ -44,13 +44,23 @@ for (let i = 0; i < animateObjects.length; i++) {
 }
 
 ham.addEventListener('click',()=>{
- nav.style.display='block'
+    console.log('hey');
+    // nav.style.display='block';
+    nav.classList.toggle('visible')
+    // setTimeout(()=>{
+    //     nav.style.display='none';
+    // },600)
+
  ham.style.display='none'
  close.style.display='block'
 })
 
 close.addEventListener('click',()=>{
-    nav.style.display='none';
+    nav.classList.remove('visible')
+    
+    // setTimeout(()=>{
+    //     nav.style.display='none';
+    // },600)
     ham.style.display='block';
     close.style.display='none';
 })

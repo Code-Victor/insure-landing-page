@@ -38,11 +38,22 @@ nav .container{
     max-width: none;
 }
 .mobile-nav{
-    display: none;
-    height: 90vh;
+    height: 0vh;
     position: relative;
     background: hsl(256, 26%, 20%);
+    transition: 0.6s;
+    /* display: none; */
+    pointer-events: none;
+    opacity:0;
 }
+.visible{
+    height: 90vh;
+    pointer-events: auto;
+    display: block;
+    opacity:1
+}
+
+    
 .m-nav-links{
     margin-top: 40px;
     display: flex;
@@ -543,3 +554,5 @@ body{
         
     }
 }
+
+    
