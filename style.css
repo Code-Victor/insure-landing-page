@@ -84,6 +84,9 @@ nav .container{
     color: hsl(273, 4%, 51%);
     font-weight: 700;
 }
+.nav-link:hover, .nav-link:active{
+    color:hsl(270, 9%, 17%);
+}
 .ham{
     display: none;
 }
@@ -165,7 +168,9 @@ nav .container{
     gap: 20px;
     grid-template-columns: 1fr 1fr 1fr;
 }
-
+.explanation-card{
+    opacity: 0;
+}
 .explanation-card img{
     margin-bottom: 30px;
 }
@@ -301,9 +306,14 @@ body{
     text-transform: uppercase;
     font-weight: 700;
     display: inline;
+    transition: 0.3s ease-in-out;
 }
 .b-white{
     border:1px solid white
+}
+.b-white:hover{
+    color:hsl(270, 9%, 17%);
+    background: white;
 }
 .b-grey{
     border:2px solid white;
@@ -312,6 +322,10 @@ body{
 .b-dark{
     border:3px solid hsl(270, 9%, 17%);
     color: hsl(270, 9%, 17%);
+}
+.b-dark:hover{
+    color:#fff;
+    background-color: hsl(270, 9%, 17%);
 }
 .bg-pattern{
     position: absolute;
@@ -424,4 +438,108 @@ body{
         gap: 20px;
     }
 }
+/* Animations */
+.left-fadeIn{
+    animation: leftFadeIn 1s ease-in-out;
+    animation-fill-mode: forwards;
+}
+.right-fadeIn{
+    animation: rightFadeIn 1s ease-in-out;
+    animation-fill-mode: forwards;
+}
+.up-fadeIn{
+    animation: upFadeIn 1s ease-in-out;
+    animation-fill-mode: forwards;
+}
+.down-fadeIn{
+    animation: downFadeIn 1s ease-in-out;
+    animation-fill-mode: forwards;
+    
+}
+.delay-1{
+    animation-delay: 0.3s;
+}
+.delay-2{
+    animation-delay: 0.5s;
+}
+.delay-3{
+    animation-delay: 0.7s;
+}
+@keyframes leftFadeIn {
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+@keyframes rightFadeIn {
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+@keyframes upFadeIn {
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@keyframes downFadeIn {
+    0%{
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
 
+    
+
+.funny-animate:hover{
+    animation: funny-animate 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes funny-animate {
+    0%{
+        opacity: 0;
+        transform: translateY(0px);
+    }
+    20%{
+        opacity: 1;
+        transform: 
+            translateY(-10px)
+            scale(1.05);
+        
+    }
+    30%{
+        transform: rotate(-30deg) scale(1.05);
+    }
+    50%{
+        transform: rotate(30deg) scale(1.05);
+    }
+    70%{
+        transform: rotate(-30deg) scale(1.05);
+    }
+    90%{
+        transform: rotate(30deg) scale(1.05);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+        
+    }
+}
