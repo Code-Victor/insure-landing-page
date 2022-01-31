@@ -8,11 +8,11 @@
 
 <div align="center">
   <h3>
-    <a href="https://github.com/Code-Victor/insure-landing-page">
+    <a href="https://code-victor.github.io/insure-landing-page/">
       Demo
     </a>
     <span> | </span>
-    <a href="https://code-victor.github.io/insure-landing-page/">
+    <a href="https://github.com/Code-Victor/insure-landing-page">
       Solution
     </a>
     <span> | </span>
